@@ -12,7 +12,7 @@ from user_agent import *
 from help import *
 from config import *
 from threading import Thread
-
+w = 'vip'
 a = 'qwertyuiopassdfghjklzxcvbnm'
 b = '1234567890'
 e = 'qwertyuiopassdfghjklzxcvbnm1234567890'
@@ -194,6 +194,36 @@ def gen_user(choice):
             c = d = random.choices(a)
             d = random.choices(b)
             f = [c[0], d[0], c[0], c[0], c[0]]
+            random.shuffle(f)
+            username = ''.join(f)
+        else:
+            pass
+    if choice == "14":
+        c = random.choices(a)
+        d = random.choices(e)
+        f = [c[0], d[0], w[0]]
+        random.shuffle(f)
+        username = ''.join(f)
+        if username in banned[0]:
+            c = random.choices(a)
+            d = random.choices(b)
+            f = [c[0], d[0], w[0]]
+            random.shuffle(f)
+            username = ''.join(f)
+        else:
+            pass
+    if choice == "15":
+        c = random.choices(a)
+        d = random.choices(e)
+        k = random.choices(e)
+        f = [w[0], d[0], k[0]]
+        random.shuffle(f)
+        username = ''.join(f)
+        if username in banned[0]:
+            c = random.choices(a)
+            d = random.choices(e)
+            k = random.choices(e)
+            f = [w[0], d[0], k[0]]
             random.shuffle(f)
             username = ''.join(f)
         else:
